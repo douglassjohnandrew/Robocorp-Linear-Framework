@@ -9,7 +9,7 @@ def login(config: dict, page: Page) -> Page:
 
     # In the dialog boxes, enter "maria" for the username
     # and "thoushallnotpass" for the password
-    creds = WindowsCredentials.windows_request_credential(
+    creds = WindowsCredentials.request_credential(
         config['WindowsCredName'])
 
     # Navigate to the RobotSpareParts site and log in
