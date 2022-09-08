@@ -5,7 +5,7 @@ from RPA.Dialogs import Dialogs
 import keyring
 dialogs = Dialogs()
 
-def windows_request_credential(credName: str) -> keyring.core.credentials.Credential:
+def request_credential(credName: str) -> keyring.core.credentials.Credential:
 
     '''For attended automations only. Request credentials from users to be
     used later in the automation, and returns a SimpleCredential object
