@@ -1,0 +1,42 @@
+# Instead of hardcoding values into various py files,
+# place them here to create configurable settings.
+
+AutomationName: RobotSpareBin Sales Data Entry
+DateFormat: '%Y_%m_%d %H_%M_%S %p'
+OuterHTML: el => el.outerHTML
+OutputFolder: output/
+SheetName: data
+SiteUrl: https://robotsparebinindustries.com/
+WindowsCredName: RobotSpareBin
+
+# Group similar settings together. This helps keeps your settings
+# easily organized and retrieved. This is stored as a nested
+# dictionary, so retrieving these values is easy, for example:
+# config['Filenames']['Report'] points to SalesData.xlsx
+Filenames:
+    Report: SalesData.xlsx
+    Results: SalesResults.pdf
+    Summary: SalesSummary.png
+
+LogMessages:
+    BrowserOpen: Chromium browser opened
+    Login: Logged into RobotSpareBin successfully
+    Submit: Submitted the RobotSpareBin form successfully
+    Error: Unhandled exception occurred, error screenshot taken
+    BrowserClose: Chromium browser closed
+
+Selectors:
+    # Used when logging in
+    Login: text=Log in
+    Logout: id=logout
+    Password: id=password
+    Username: id=username
+    # Used when entering sales data
+    FirstName: id=firstname
+    LastName: id=lastname
+    SalesResult: id=salesresult
+    SalesTarget: id=salestarget
+    Submit: text=Submit
+    # Used when exporting sales info
+    Results: id=sales-results
+    Summary: css=div.sales-summary
