@@ -38,7 +38,7 @@ try:
 
 except:
     # Take a screenshot and log the stack trace
-    Utils.take_error_screenshot(config['OutputFolder'] +
+    Utils.take_screenshot(config['OutputFolder'] +
         startTime + '.png')
     logger.exception(config['LogMessages']['Error'] + '\n')
 
