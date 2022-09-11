@@ -9,7 +9,7 @@ def now(dateformat: str) -> str:
 
     return datetime.datetime.now().strftime(dateformat)
 
-def take_error_screenshot(filePath: str):
+def take_screenshot(filePath: str):
 
     '''Take a screenshot of the primary monitor'''
 
